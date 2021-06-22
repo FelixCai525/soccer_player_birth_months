@@ -1,0 +1,39 @@
+---
+title: "Euro 2020 Soccer Player Birth Months"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(rvest)
+library(lubridate)
+library(primer.data)
+```
+
+```{r, echo = FALSE}
+clean_data <- read_csv("birthdates.csv", col_types =  cols(value = col_character())) %>% 
+  mutate(date = parse_date(str_sub(value, 2, 11))) %>%
+  mutate(raw_month = months(date)) %>% 
+  mutate(raw_month = str_sub(raw_month, 1, 3)) %>% 
+  mutate(month = parse_factor(raw_month, levels = month.abb)) %>% 
+  group_by(month) %>% 
+  summarize(total = n())
+```
+
+```{r, echo = FALSE}
+clean_data %>% 
+ ggplot(aes(fct_reorder(month, desc(month)), total, fill = total)) +
+  geom_col() +
+  coord_flip() + 
+  scale_fill_gradient(low = "dodgerblue", high = "dodgerblue4") +
+  labs(title = "Birth Months of UEFA Euro 2020 players",
+       subtitle = "Greater number of elite players are born in the earlier months of the year \nFelix Cai 06/16/2021",
+       x = "Month",
+       y = "Count",
+       fill = "Total",
+       caption = "Source: Wikipedia") +
+  theme_bw()
+```
