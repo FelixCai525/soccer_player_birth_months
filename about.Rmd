@@ -1,7 +1,7 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+  Examining the correlation between birth month and skill level for soccer players.
 ---
 
 ```{r setup, include=FALSE}

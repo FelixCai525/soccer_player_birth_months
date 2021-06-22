@@ -3,10 +3,10 @@
     {
       "path": "about.html",
       "title": "About this site",
-      "description": "Some additional details about the website",
+      "description": "Examining the correlation between birth month and skill level for soccer players.",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T20:18:54-04:00"
+      "last_modified": "2021-06-21T20:55:10-04:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,21 @@
       "description": "Examination of the birth months of Euro 2020 Soccer Players\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T20:37:01-04:00"
+      "last_modified": "2021-06-21T20:55:14-04:00"
+    },
+    {
+      "path": "Sources.html",
+      "title": "Source",
+      "description": "Flawless data source webscraped completely legally.\n",
+      "author": [
+        {
+          "name": "Felix Cai",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nGood ol’ Wikipedia.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T20:55:15-04:00"
     }
   ],
   "collections": []
