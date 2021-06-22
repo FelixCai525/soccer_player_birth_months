@@ -1,7 +1,7 @@
 ---
 title: "Euro 2020 Soccer Player Birth Months"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Examination of the birth months of Euro 2020 Soccer Players
 site: distill::distill_website
 ---
 
